@@ -8,6 +8,7 @@
     yum:
       name: policycoreutils-python
       state: present
+      update_cache: yes
 
 #  - selinux:
 #      policy: targeted
