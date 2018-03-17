@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "backend1"
 
   config.vm.provision "ansible" do |ansible|
-      ansible.playbook = "ping.yml"
+      ansible.playbook = "../ping.yml"
       ansible.groups = {
         "balanacer" => ["lb"],
         "app1:children" => ["app1_backend", "app1_frontend"],
